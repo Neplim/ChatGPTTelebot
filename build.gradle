@@ -23,13 +23,21 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    with jar
+
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
+
     manifest {
         attributes 'Implementation-Title': 'ChatGPT-TeleBot',
                    'Implementation-Version': '1.0',
                    'Main-Class': 'ChatBot'
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
 }
