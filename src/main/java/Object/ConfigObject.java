@@ -1,13 +1,12 @@
-package Dto;
+package Object;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-public class ConfigDto {
+public class ConfigObject {
 
     @JsonProperty("Data")
     public Data data;
@@ -33,8 +32,6 @@ public class ConfigDto {
     public static class ChatList{
         @JsonProperty("ChatId")
         public long chatId;
-
-
 
     }
 }

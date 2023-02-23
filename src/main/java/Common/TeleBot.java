@@ -1,5 +1,6 @@
+package Common;
 
-import Dto.ConfigDto;
+import Object.ConfigObject;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.completion.CompletionResult;
 import com.theokanning.openai.image.CreateImageRequest;
@@ -10,14 +11,12 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import static Helpers.ConfigHelper.*;
 
+import static Helpers.ConfigHelper.*;
 
 public class TeleBot extends TelegramLongPollingBot  {
 
-    ConfigDto config = getConfig();
+    ConfigObject config = getConfig();
     public TeleBot() throws IOException {
     }
 
