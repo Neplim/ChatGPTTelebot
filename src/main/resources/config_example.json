@@ -1,0 +1,23 @@
+{
+  "Data": {
+    "Botname": "Name your bot",
+    "TelegramToken": "Token your bor",
+    "OpenAIToken": "API Token your openAI account",
+    "UserList": [
+      {
+        "TelegramId": 111111111
+      },
+      {
+        "TelegramId": 222222222
+      }
+    ],
+    "ChatList": [
+      {
+        "ChatId": -11111111111111
+      },
+      {
+        "ChatId": -22222222222222
+      }
+    ]
+  }
+}
