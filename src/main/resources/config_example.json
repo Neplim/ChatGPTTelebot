@@ -1,8 +1,11 @@
 {
-  "Data": {
     "Botname": "Name your bot",
     "TelegramToken": "Token your bor",
     "OpenAIToken": "API Token your openAI account",
+    "GPTModel": "text-davinci-003",
+    "MaxToken": 2000,
+    "BotActivateMessage": "@ChatLGPTbot",
+    "GPTResponseTimeout": 10,
     "UserList": [
       {
         "TelegramId": 111111111
@@ -19,5 +22,4 @@
         "ChatId": -22222222222222
       }
     ]
-  }
 }

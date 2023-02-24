@@ -2,16 +2,14 @@ package Object;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+
+import java.time.Duration;
 import java.util.List;
 
 @Getter
 @Setter
 public class ConfigObject {
 
-    @JsonProperty("Data")
-    public Data data;
-
-    public static class Data{
         @JsonProperty("Botname")
         public String botname;
         @JsonProperty("TelegramToken")
@@ -22,7 +20,15 @@ public class ConfigObject {
         public List<UserList> userList;
         @JsonProperty("ChatList")
         public List<ChatList> chatList;
-    }
+        @JsonProperty("GPTModel")
+        public String gptModel;
+        @JsonProperty("MaxToken")
+        public int maxToken;
+        @JsonProperty("BotActivateMessage")
+        public String botActivateMessage;
+        @JsonProperty("GPTResponseTimeout")
+        public int gptResponseTimeout;
+
 
     public static class UserList{
         @JsonProperty("TelegramId")
